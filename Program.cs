@@ -3,6 +3,21 @@
 3, 5 -> 243 (3⁵)
 2, 4 -> 16
 */
+void powNumber()
+{
+    while (true)
+    {
+        Console.Write("Введите число: ");
+        int firstNumber = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Введите степень в которое необходимо возвести число: ");
+        int secondNumber = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Для дальнейшего выхода введите 'q': ");  
+        string quit = Console.ReadLine().ToLower();
+        Console.WriteLine($"число {firstNumber} в степени {secondNumber} = {Math.Pow(firstNumber, secondNumber)}");
+        if (quit == "q") break;
+    }
+}
+powNumber();
 /*
 Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 452 -> 11
